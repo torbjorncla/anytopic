@@ -1,0 +1,24 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+mainClassName = 'com.beng.anytopic.App'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+repositories {
+    maven { url 'https://repo.eclipse.org/content/repositories/snapshots' }
+	maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+	mavenCentral()
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.5'
+   	compile 'ch.qos.logback:logback-classic:1.1.2'
+    compile 'io.netty:netty-all:4.0.23.Final'
+    compile 'org.projectlombok:lombok:1.14.6'
+    compile 'com.typesafe.akka:akka-actor_2.10:2.3.5'
+    compile 'org.eclipse.paho:mqtt-client:0.3.0-SNAPSHOT'
+    testCompile "junit:junit:4.11"
+}
